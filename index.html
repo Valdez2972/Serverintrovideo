@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Fullscreen Video</title>
     <style>
-        /* Make sure the video iframe fills the screen */
+        /* Ensure the video fills the screen */
         html, body {
             margin: 0;
             padding: 0;
@@ -25,13 +25,13 @@
     <!-- Embed YouTube video -->
     <iframe 
         id="youtubePlayer"
-        src="https://www.youtube.com/watch?v=1EHM6Df_Asg"
+        src="https://www.youtube.com/embed/1EHM6Df_Asg?autoplay=1&controls=0&showinfo=0&rel=0&fs=1&modestbranding=1"
         allow="autoplay; fullscreen"
         allowfullscreen>
     </iframe>
 
     <script>
-        // Request fullscreen mode for the iframe
+        // Attempt fullscreen on load
         window.onload = () => {
             const iframe = document.getElementById('youtubePlayer');
             iframe.requestFullscreen().catch((err) => {
