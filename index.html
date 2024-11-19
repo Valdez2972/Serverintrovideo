@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Fullscreen Video</title>
+    <title>YouTube Video</title>
     <style>
-        /* Ensure the video fills the screen */
+        /* Style to ensure the iframe fills the screen */
         html, body {
             margin: 0;
             padding: 0;
@@ -22,22 +22,14 @@
     </style>
 </head>
 <body>
-    <!-- Embed YouTube video -->
+    <!-- Embed the YouTube video -->
     <iframe 
-        id="youtubePlayer"
-        src="https://www.youtube.com/embed/1EHM6Df_Asg?autoplay=1&controls=0&showinfo=0&rel=0&fs=1&modestbranding=1"
-        allow="autoplay; fullscreen"
+        src="https://www.youtube.com/embed/1EHM6Df_Asg?si=zfuhA7swsvwt5U8X&amp;start=61" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
         allowfullscreen>
     </iframe>
-
-    <script>
-        // Attempt fullscreen on load
-        window.onload = () => {
-            const iframe = document.getElementById('youtubePlayer');
-            iframe.requestFullscreen().catch((err) => {
-                console.error("Failed to enable fullscreen:", err);
-            });
-        };
-    </script>
 </body>
 </html>
